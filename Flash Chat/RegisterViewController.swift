@@ -10,7 +10,7 @@ import SVProgressHUD
 class RegisterViewController: UIViewController {
     
     
-    //Pre-linked IBOutlets
+   
     
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
         
         SVProgressHUD.show()
         
-        //Set up a new user on our Firebase database
+    
         
         Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
             

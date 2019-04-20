@@ -10,10 +10,10 @@ import ChameleonFramework
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    // Declare instance variables here
+    
     var messageArray : [Message] = [Message]()
     
-    // We've pre-linked the IBOutlets
+    
     @IBOutlet var heightConstraint: NSLayoutConstraint!
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var messageTextfield: UITextField!
@@ -45,7 +45,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    //MARK: - TableView Delegate Methods
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -57,13 +57,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if cell.senderUsername.text == Auth.auth().currentUser?.email as String! {
             
-            //Set background to blue if message is from logged in user.
+           
             cell.avatarImageView.backgroundColor = UIColor.flatMint()
             cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
             
         } else {
             
-            //Set background to grey if message is from another user.
+           
             cell.avatarImageView.backgroundColor = UIColor.flatWatermelon()
             cell.messageBackground.backgroundColor = UIColor.flatGray()
         }
@@ -80,7 +80,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    //TODO: Declare configureTableView here:
+    
     
     func configureTableView() {
         messageTableView.rowHeight = UITableViewAutomaticDimension
@@ -91,7 +91,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     
-    //MARK: - TextField Delegate Methods
+  
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

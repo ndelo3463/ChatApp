@@ -11,7 +11,7 @@ import SVProgressHUD
 
 class LogInViewController: UIViewController {
     
-    //Textfields pre-linked with IBOutlets
+  
     @IBOutlet var emailTextfield: UITextField!
     @IBOutlet var passwordTextfield: UITextField!
     
@@ -25,7 +25,7 @@ class LogInViewController: UIViewController {
     }
     
     
-    //Log in an existing user
+
     
     @IBAction func logInPressed(_ sender: AnyObject) {
         
